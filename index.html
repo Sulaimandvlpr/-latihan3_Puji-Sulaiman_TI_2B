@@ -2,17 +2,28 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>latihan3 Puji Sulaiman TI 2B.html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 3 - Puji Sulaiman TI 2B</title>
+    <style>
+        /* Tambahan sedikit CSS agar tampilan lebih rapi di device dosen */
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        img { border: 1px solid #ccc; border-radius: 5px; }
+        area { cursor: pointer; }
+    </style>
 </head>
 <body>
 
+    <h1 align="center">Tugas Pemrograman Web - Latihan 3</h1>
+    <p align="center"><b>Nama:</b> Puji Sulaiman | <b>Kelas:</b> TI 2B</p>
+    <hr>
+
     <h2>1. Layout Gambar dengan Table</h2>
-    <table border="1" cellpadding="10" cellspacing="0">
+    <table border="1" cellpadding="10" cellspacing="0" width="320">
         <tr>
             <td align="center">
                 <img src="src/tugu.jpg" alt="Tugu PNJ" width="300">
                 <br>
-                <b>Keterangan:</b> Gambar Tugu (Layout Table)
+                <p><b>Keterangan:</b> Gambar Tugu PNJ (Layout Table)</p>
             </td>
         </tr>
     </table>
@@ -20,52 +31,64 @@
     <hr>
 
     <h2>2. Image Map pada Foto Lokal</h2>
-    <p>Klik area gedung untuk ke PNJ, atau area pepohonan untuk ke W3Schools.</p>
+    <p>Arahkan kursor dan klik area tertentu pada gambar:</p>
+    <ul>
+        <li>Klik area <b>Gedung</b> untuk menuju Website PNJ.</li>
+        <li>Klik area <b>Pepohonan/Langit</b> untuk menuju W3Schools.</li>
+    </ul>
     
-    <img src="src/pnj.jpg" alt="Perpustakaan PNJ" usemap="Perpustakaan PNJ" width="500">
+    <img src="src/pnj.jpg" alt="Kampus PNJ" usemap="#peta-tugas" width="500">
 
     <map name="peta-tugas">
-        <area shape="rect" coords="50,150,250,350" alt="PNJ" href="https://www.pnj.ac.id">
-        <area shape="circle" coords="400,200,80" alt="W3Schools" href="https://www.w3schools.com">
+        <area shape="rect" coords="50,150,300,400" alt="Website PNJ" href="https://www.pnj.ac.id" target="_blank">
+        <area shape="circle" coords="400,100,60" alt="W3Schools" href="https://www.w3schools.com" target="_blank">
     </map>
 
     <hr>
 
     <h2>3. Hyperlink dengan Variasi Target</h2>
+    <p>Daftar Link Eksternal:</p>
     <ul>
-        <li><a href="https://www.komdigi.go.id/" target="_blank">Komdigi</a></li>
-        <li><a href="https://www.jakarta.go.id/" target="_self">Pemda Jakarta</a></li>
-        <li><a href="https://id.wikipedia.org/wiki/Hari_Kemerdekaan_Republik_Indonesia" target="_parent">Hari Kemerdekaan Republik Indonesia</a></li>
+        <li><a href="https://www.komdigi.go.id/" target="_blank">Komdigi</a> (Buka di Tab Baru)</li>
+        <li><a href="https://www.jakarta.go.id/" target="_self">Pemda Jakarta</a> (Buka di Tab yang Sama)</li>
+        <li><a href="https://id.wikipedia.org/wiki/Hari_Kemerdekaan_Republik_Indonesia" target="_top">Hari Kemerdekaan RI</a> (Full Window)</li>
     </ul>
 
     <hr>
 
     <h2 id="atas">4. Bookmark Informasi PNJ</h2>
-    <p>Klik teks biru di bawah untuk scroll otomatis ke berita di bawah ini:</p>
-    
-    <a href="#tentang-pnj">Tentang PNJ</a> | 
-    <a href="#jurusan-pnj">Daftar Jurusan</a> | 
-    <a href="#koneksi-pnj">Koneksi & Kerjasama</a>
+    <p>Navigasi Cepat:</p>
+    <nav>
+        <a href="#tentang-pnj">[ Tentang PNJ ]</a> | 
+        <a href="#jurusan-pnj">[ Daftar Jurusan ]</a> | 
+        <a href="#koneksi-pnj">[ Koneksi & Kerjasama ]</a>
+    </nav>
 
-    <p style="margin-bottom: 800px;"></p>
+    <div style="margin-bottom: 600px;"></div>
 
-    <h3 id="tentang-pnj">Berita Terkini: Tentang PNJ</h3>
-    <p>Politeknik Negeri Jakarta (PNJ) berlokasi di Kampus UI Depok. Merupakan institusi pendidikan vokasi yang berfokus pada keahlian praktis untuk menyiapkan lulusan yang siap terjun ke dunia kerja nasional maupun internasional.</p>
-    <a href="#atas">Kembali ke Atas</a>
+    <section id="tentang-pnj">
+        <h3>Berita Terkini: Tentang PNJ</h3>
+        <p>Politeknik Negeri Jakarta (PNJ) berlokasi di Kampus UI Depok. Merupakan institusi pendidikan vokasi yang berfokus pada keahlian praktis.</p>
+        <a href="#atas">↑ Kembali ke Atas</a>
+    </section>
 
-    <p style="margin-bottom: 800px;"></p>
+    <div style="margin-bottom: 600px;"></div>
 
-    <h3 id="jurusan-pnj">Berita Terkini: Daftar Jurusan</h3>
-    <p>PNJ mengelola berbagai jurusan teknik dan niaga, seperti Teknik Informatika, Teknik Mesin, Sipil, Elektro, hingga Akuntansi dan Administrasi Niaga yang semuanya sudah terakreditasi dengan sangat baik.</p>
-    <a href="#atas">Kembali ke Atas</a>
+    <section id="jurusan-pnj">
+        <h3>Berita Terkini: Daftar Jurusan</h3>
+        <p>PNJ mengelola berbagai jurusan teknik dan niaga, seperti Teknik Informatika, Teknik Mesin, Sipil, Elektro, hingga Akuntansi.</p>
+        <a href="#atas">↑ Kembali ke Atas</a>
+    </section>
 
-    <p style="margin-bottom: 800px;"></p>
+    <div style="margin-bottom: 600px;"></div>
 
-    <h3 id="koneksi-pnj">Berita Terkini: Koneksi Industri</h3>
-    <p>Koneksi PNJ sangat luas, mencakup kerjasama dengan perusahaan BUMN, perusahaan swasta besar, serta kemitraan luar negeri untuk program magang dan penempatan kerja lulusan.</p>
-    <a href="#atas">Kembali ke Atas</a>
+    <section id="koneksi-pnj">
+        <h3>Berita Terkini: Koneksi Industri</h3>
+        <p>Koneksi PNJ sangat luas, mencakup kerjasama dengan perusahaan BUMN dan swasta besar untuk program magang.</p>
+        <a href="#atas">↑ Kembali ke Atas</a>
+    </section>
 
-    <p style="margin-bottom: 200px;"></p>
+    <div style="margin-bottom: 100px;"></div>
 
 </body>
 </html>
